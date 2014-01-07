@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <project path="device/sony/kumquat" name="95A31/android_device_sony_kumquat" remote="private"/>
+
+  <project path="hardware/semc" name="95A31/android_hardware_semc" remote="private"/>
+
+  <project path="kernel/sony/u8500" name="95A31/android_kernel_sony_u8500" remote="private"/>
+
+  <project path="vendor/sony/kumquat" name="95A31/android_vendor_sony_kumquat" remote="private"/>
+
+  <remove-project name="CyanogenMod/android_external_bluetooth_bluedroid"/>
+  
+  <remove-project name="CyanogenMod/android_external_wpa_supplicant_8"/>
+  <project path="external/wpa_supplicant_8_ti" name="95A31/wpa_supplicant_8_ti" remote="private"/>
+
+  <project path="external/dbus" name="95A31/android_external_dbus" remote="private"/>
+  
+  <project path="." name="95A31/android_scripts" remote="private"/>
+
+</manifest>
