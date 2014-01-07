@@ -28,3 +28,13 @@ out/
 prebuilt/
 sdk/
 vendor/
+
+#repo
+.repo/.directory
+.repo/.repopickle_fetchtimes
+.repo/manifest.xml
+.repo/manifests.git/
+.repo/manifests/
+.repo/project.list
+.repo/projects/
+
