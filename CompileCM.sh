@@ -1,6 +1,3 @@
-#Beep
-alias beep='paplay /usr/share/sounds/freedesktop/stereo/complete.oga'
-
 #Set patches directory
 patchDir="hardware/semc/patches"
 
@@ -24,6 +21,8 @@ done
 
 #Compile
 . build/envsetup.sh && brunch kumquat; 
-beep; 
-beep; 
-beep;
+
+#Beep (3x)
+paplay /usr/share/sounds/freedesktop/stereo/complete.oga;
+paplay /usr/share/sounds/freedesktop/stereo/complete.oga;
+paplay /usr/share/sounds/freedesktop/stereo/complete.oga;
