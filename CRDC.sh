@@ -8,16 +8,16 @@ git checkout cm-11.0;
 cd ./device/sony/kumquat;
 git checkout cm-11.0;
 
-cd $pwd; cd hardware/sem;
+cd $pwd; cd ./hardware/sem;
 git checkout cm-11.0;
 
-cd $pwd; cd kernel/sony/u8500;
+cd $pwd; cd ./kernel/sony/u8500;
 git checkout cm-11.0;
 
-cd $pwd; cd external/wpa_supplicant_8_ti;
+cd $pwd; cd ./external/wpa_supplicant_8_ti;
 git checkout cm-11.0;
 
-cd $pwd; cd external/dbus;
+cd $pwd; cd ./external/dbus;
 git checkout cm-11.0
 
 cd $pwd;
