@@ -8,7 +8,7 @@ git checkout cm-11.0;
 cd ./device/sony/kumquat;
 git checkout cm-11.0;
 
-cd $pwd; cd ./hardware/sem;
+cd $pwd; cd ./hardware/semc;
 git checkout cm-11.0;
 
 cd $pwd; cd ./kernel/sony/u8500;
