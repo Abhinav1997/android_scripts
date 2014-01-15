@@ -1,6 +1,6 @@
 ./CleanCM.sh;
 ./ResetCM.sh;
-./repo forall -c 'git checkout `git rev-list --all -n1 --before="2013-12-31 15:00"`';
+./repo forall -c 'git checkout `git rev-list --all -n1 --before="2013-12-31 00:00"`';
 
 pwd=$PWD
 git checkout cm-11.0;
