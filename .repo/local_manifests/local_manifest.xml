@@ -2,8 +2,7 @@
 <manifest>
 
   <remote name="kernel" fetch="http://git.kernel.org"/>
- 
-
+  
   
   <project path="." name="95A31/android_scripts" remote="private"/>
 
