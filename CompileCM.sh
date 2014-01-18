@@ -21,7 +21,7 @@ done
 
 #Revert
 echo Reverting...
-./$patchDir/revert.sh 
+$patchDir/reverts.sh 
 
 #Compile
 ./RecompileCM.sh
