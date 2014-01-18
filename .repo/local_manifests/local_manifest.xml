@@ -5,7 +5,7 @@
 	  fetch="git://git.kernel.org/pub/scm/" />
   
   <remote  name="googlecode"
-           fetch="." />  
+           fetch="https://code.google.com/" />  
   
   <project path="." name="95A31/android_scripts" remote="private"/>
 
@@ -19,7 +19,7 @@
 
   <remove-project name="CyanogenMod/android_external_bluetooth_bluedroid"/>
   <project path="external/bluez" name="bluetooth/bluez" remote="kernel" groups="pdk" revision="master"/>
-  <project path="external/bluetooth/glib" name="aosp-bluez.glib" remote="googlecode" groups="pdk" revision="master" />
+  <project path="external/bluetooth/glib" name="p/aosp-bluez.glib" remote="googlecode" groups="pdk" revision="master" />
   
   <project path="external/dbus" name="95A31/android_external_dbus" remote="private"/>
   
