@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <remote name="kernel" fetch="git://git.kernel.org/pub/scm/"/>
+  <remote name="kernel" 
+	  fetch="git://git.kernel.org/pub/scm/" />
   
+  <remote  name="googlecode"
+           fetch="." />  
   
   <project path="." name="95A31/android_scripts" remote="private"/>
 
@@ -15,7 +18,8 @@
   <project path="vendor/sony/kumquat" name="95A31/android_vendor_sony_kumquat" remote="private"/>
 
   <remove-project name="CyanogenMod/android_external_bluetooth_bluedroid"/>
-  <project path="external/bluez" name="bluetooth/bluez" remote="kernel" revision="master"/>
+  <project path="external/bluez" name="bluetooth/bluez" remote="kernel" groups="pdk" revision="master"/>
+  <project path="external/bluetooth/glib" name="aosp-bluez.glib" remote="googlecode" groups="pdk" revision="master" />
   
   <project path="external/dbus" name="95A31/android_external_dbus" remote="private"/>
   
