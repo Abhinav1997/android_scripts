@@ -18,7 +18,10 @@
   <project path="vendor/sony/kumquat" name="95A31/android_vendor_sony_kumquat" remote="private"/>
 
   <remove-project name="CyanogenMod/android_external_bluetooth_bluedroid"/>
+  
+  <!-- 
   <project path="external/bluez" name="bluetooth/bluez" remote="kernel" groups="pdk" revision="master"/>
-  <project path="external/bluetooth/glib" name="p/aosp-bluez.glib" remote="googlecode" groups="pdk" revision="master" />
+  <project path="external/bluetooth/glib" name="p/aosp-bluez.glib" remote="googlecode" groups="pdk" revision="master" /> 
+  -->
   
 </manifest>
