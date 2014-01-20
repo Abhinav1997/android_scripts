@@ -15,13 +15,13 @@ do
   RETVAL=$?
   if [ $RETVAL -ne 0 ]; then
         echo "Error with patch $f"
-        #exit $RETVAL
+        exit $RETVAL
   fi
 done
 
 #Revert
 echo Reverting...
-#$patchDir/reverts.sh 
+$patchDir/reverts.sh 
 
 #Compile
 ./RecompileCM.sh
