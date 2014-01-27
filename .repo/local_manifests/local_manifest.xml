@@ -7,21 +7,14 @@
   <remote  name="googlecode"
            fetch="https://code.google.com/" />  
   
-  <project path="." name="95A31/android_scripts" remote="private"/>
+  <project path="." name="95A31/android_scripts" remote="github"/>
 
-  <project path="device/sony/kumquat" name="95A31/android_device_sony_kumquat" remote="private"/>
+  <project path="device/sony/kumquat" name="95A31/android_device_sony_kumquat" remote="github"/>
 
-  <project path="hardware/semc" name="95A31/android_hardware_semc" remote="private"/>
+  <project path="hardware/semc" name="95A31/android_hardware_semc" remote="github"/>
 
-  <project path="kernel/sony/u8500" name="95A31/android_kernel_sony_u8500" remote="private"/>
+  <project path="kernel/sony/u8500" name="95A31/android_kernel_sony_u8500" remote="github"/>
 
-  <project path="vendor/sony/kumquat" name="95A31/android_vendor_sony_kumquat" remote="private"/>
-  
-  <remove-project name="CyanogenMod/android_external_bluetooth_bluedroid"/>
-  
-  <!-- 
-  <project path="external/bluez" name="bluetooth/bluez" remote="kernel" groups="pdk" revision="master"/>
-  <project path="external/bluetooth/glib" name="p/aosp-bluez.glib" remote="googlecode" groups="pdk" revision="master" /> 
-  -->
+  <project path="vendor/sony/kumquat" name="95A31/android_vendor_sony_kumquat" remote="github"/>
   
 </manifest>
