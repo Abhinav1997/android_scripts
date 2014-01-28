@@ -17,8 +17,6 @@
 
   <project path="vendor/sony/kumquat" name="95A31/android_vendor_sony_kumquat" remote="github"/>
   
-  <project path="external/bluetooth/bluedroid/libbluedroid" name="95A31/android_external_bluetooth_bluedroid_libbluedroid" remote="github"/>
-  
-  <project path="system/bluetooth" name="95A31/android_system_bluetooth" remote="github"/>
+   <project path="system/bluetooth" name="95A31/android_system_bluetooth" remote="github"/>
    
 </manifest>
