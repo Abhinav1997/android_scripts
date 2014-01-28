@@ -19,6 +19,6 @@
   
   <project path="external/bluetooth/bluedroid/libbluedroid" name="95A31/android_external_bluetooth_bluedroid_libbluedroid" remote="github"/>
   
-  <project path="system/bluetooth/bluez-clean-headers" name="95A31/android_system_bluetooth_bluez-clean-headers" remote="github"/>
+  <project path="system/bluetooth" name="95A31/android_system_bluetooth" remote="github"/>
    
 </manifest>
