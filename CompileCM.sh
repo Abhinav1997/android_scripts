@@ -19,9 +19,5 @@ do
   fi
 done
 
-#Revert
-echo Reverting...
-$patchDir/reverts.sh 
-
 #Compile
 ./RecompileCM.sh
