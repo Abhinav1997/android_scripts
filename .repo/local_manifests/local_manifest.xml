@@ -16,7 +16,10 @@
   <project path="kernel/sony/u8500" name="95A31/android_kernel_sony_u8500" remote="github"/>
 
   <project path="vendor/sony/kumquat" name="95A31/android_vendor_sony_kumquat" remote="github"/>
-  
-   <project path="system/bluetooth" name="95A31/android_system_bluetooth" remote="github"/>
+   
+  <project remote="kernel" path="external/bluetooth/bluez" name="bluetooth/bluez" groups="pdk" revision="master" />
+  <project remote="kernel" path="external/bluetooth/sbc" name="bluetooth/sbc" groups="pdk" revision="master" />
+  <project remote="googlecode" path="external/bluetooth/glib" name="aosp-bluez.glib" groups="pdk" revision="master" />
+
    
 </manifest>
