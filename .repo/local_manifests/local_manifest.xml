@@ -8,19 +8,18 @@
            fetch="https://code.google.com/" />  
   
   <project path="." name="95A31/android_scripts" remote="github"/>
-
+  
   <project path="device/sony/kumquat" name="95A31/android_device_sony_kumquat" remote="github"/>
-
   <project path="hardware/semc" name="95A31/android_hardware_semc" remote="github"/>
-
   <project path="kernel/sony/u8500" name="95A31/android_kernel_sony_u8500" remote="github"/>
-
   <project path="vendor/sony/kumquat" name="95A31/android_vendor_sony_kumquat" remote="github"/>
   
   <remove-project name="CyanogenMod/android_external_bluetooth_bluedroid" />
   <project remote="kernel" path="external/bluetooth/bluez" name="bluetooth/bluez" groups="pdk" revision="master" />
   <project remote="kernel" path="external/bluetooth/sbc" name="bluetooth/sbc" groups="pdk" revision="master" />
   <project remote="googlecode" path="external/bluetooth/glib" name="aosp-bluez.glib" groups="pdk" revision="master" />
-
-   
+  
+  <project path="frameworks/base/fmradio" name="95A31/android_frameworks_base_fmradio" remote="github"/>
+  <project path="packages/apps/FmRadio" name="freexperia/android_packages_apps_FMRadio" remote="github" revision="jellybean"/>
+  
 </manifest>
