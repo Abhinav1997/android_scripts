@@ -22,5 +22,4 @@
   <project path="frameworks/base/fmradio" name="95A31/android_frameworks_base_fmradio" remote="github"/>
   <project path="packages/apps/FmRadio" name="freexperia/android_packages_apps_FMRadio" remote="github" revision="jellybean"/>
   
-  <project path="hardware/semc/backports" name="hauke/backports" remote="github" revision="linux-3.12.y"/>
 </manifest>
