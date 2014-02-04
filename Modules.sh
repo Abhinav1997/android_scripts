@@ -11,7 +11,7 @@ make -C $BACKPORT_DIR clean;
 make -C $BACKPORT_DIR defconfig-xperia;
 make -C $BACKPORT_DIR;
 
-rmdir -rf $BACKPORT_DIR/bins &> /dev/null;
+rm -rf $BACKPORT_DIR/bins &> /dev/null;
 mkdir $BACKPORT_DIR/bins;
 
 find $BACKPORT_DIR -name *.ko -exec mv {}  $BACKPORT_DIR/bins \;  &> /dev/null;
