@@ -7,9 +7,9 @@ set -a
   KLIB=out/target/product/kumquat/obj/KERNEL_OBJ
 set +a
 
-make clean;
-make defconfig-xperia;
-make;
+make -C $BACKPORT_DIR clean;
+make -C $BACKPORT_DIR defconfig-xperia;
+make -C $BACKPORT_DIR;
 
 rmdir -rf hardware/semc/backports/modules &> /dev/null;
 mkdir hardware/semc/backports/modules;
