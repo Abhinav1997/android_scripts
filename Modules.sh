@@ -1,4 +1,5 @@
 set -a
+$BACKPORT_DIR=$(readlink -e hardware/semc/backports)
 CROSS_COMPILE=$(readlink -e prebuilt/linux-x86/toolchain/arm-eabi-4.4.3/bin)/arm-eabi-
 ARCH=arm
 KERNEL_DIR= $(readlink -e kernel/sony/u8500)
@@ -10,7 +11,7 @@ make -C $BACKPORT_DIR clean;
 make -C $BACKPORT_DIR defconfig-xperia;
 make -C $BACKPORT_DIR;
 
-rmdir -rf hardware/semc/backports/modules &> /dev/null;
-mkdir hardware/semc/backports/modules;
+rmdir -rf $BACKPORT_DIR/modules &> /dev/null;
+mkdir $BACKPORT_DIR/modules;
 
 find $BACKPORT_DIR -name *.ko -exec mv {}  $BACKPORT_DIR/modules \;  &> /dev/null;
