@@ -1,5 +1,5 @@
 set -a
-$BACKPORT_DIR=$(readlink -e hardware/semc/backports)
+BACKPORT_DIR=$(readlink -e hardware/semc/backports)
 CROSS_COMPILE=$(readlink -e prebuilt/linux-x86/toolchain/arm-eabi-4.4.3/bin)/arm-eabi-
 ARCH=arm
 KERNEL_DIR= $(readlink -e kernel/sony/u8500)
