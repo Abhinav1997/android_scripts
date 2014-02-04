@@ -13,4 +13,4 @@ make -C $BACKPORT_DIR;
 rmdir -rf hardware/semc/backports/modules &> /dev/null;
 mkdir hardware/semc/backports/modules;
 
-find . -name *.ko -exec mv {}  ./bins \;  &> /dev/null;
+find $BACKPORT_DIR -name *.ko -exec mv {}  $BACKPORT_DIR/modules \;  &> /dev/null;
