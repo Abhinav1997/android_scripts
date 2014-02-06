@@ -5,13 +5,14 @@ ARCH=arm
 KERNEL_DIR=$(readlink -e kernel/sony/u8500)
 KLIB_BUILD=$(readlink -e  out/target/product/kumquat/obj/KERNEL_OBJ)
 KLIB=$(readlink -e out/target/product/kumquat/obj/KERNEL_OBJ)
+BKPRT_MOD_OUT_DIR=$(readlink -e out/target/product/kumquat)/backport_modules
 set +a
 
 make -C $BACKPORT_DIR clean;
 make -C $BACKPORT_DIR defconfig-xperia;
 make -C $BACKPORT_DIR;
 
-rm -rf $BACKPORT_DIR/bins &> /dev/null;
-mkdir $BACKPORT_DIR/bins;
+rm -rf $BKPRT_MOD_OUT_DIR &> /dev/null;
+mkdir -p $BKPRT_MOD_OUT_DIR;
 
-find $BACKPORT_DIR -name *.ko -exec mv {}  $BACKPORT_DIR/bins \;  &> /dev/null;
+find $BACKPORT_DIR -name *.ko -exec mv {}  $BKPRT_MOD_OUT_DIR \;  &> /dev/null;
