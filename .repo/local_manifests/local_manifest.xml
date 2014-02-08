@@ -19,7 +19,4 @@
   <project remote="kernel" path="external/bluetooth/sbc" name="bluetooth/sbc" groups="pdk" revision="master" />
   <project remote="googlecode" path="external/bluetooth/glib" name="p/aosp-bluez.glib" groups="pdk" revision="master" />
   
-  <project path="frameworks/base/fmradio" name="95A31/android_frameworks_base_fmradio" remote="github"/>
-  <project path="packages/apps/FmRadio" name="freexperia/android_packages_apps_FMRadio" remote="github" revision="jellybean"/>
-  
 </manifest>
