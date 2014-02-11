@@ -1,8 +1,8 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python2
 
 # dev-host-cl Copyright (c) 2013 by GermainZ <germanosz@gmail.om>
-# Requirements: python3
-#               python-requests
+# Requirements: python2
+#               python2-requests
 #
 # Dev-Host API documentation
 # http://d-h.st/api
@@ -21,6 +21,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
+from __future__ import division
 import xml.etree.ElementTree as ET
 from getpass import getpass
 import os
@@ -30,12 +31,13 @@ import time
 import json
 import threading
 import signal
+import sys
 
 try:
     from requests import get, post
     import requests.exceptions
 except ImportError:
-    print("The requests module is required to use this script.")
+    print "The requests module is required to use this script."
     exit(1)
 
 def arg_parser():
@@ -182,7 +184,7 @@ def h_empty(s):
 def pretty_print(result):
     """Print XML object line by line, capitalizing the tag"""
     for field in parse_info(result):
-        print("%s: %s" % (field.tag.capitalize(), field.text))
+        print "%s: %s" % (field.tag.capitalize(), field.text)
 
 def login(username, password):
     """Login and return the token, which is used for identification.
@@ -242,11 +244,16 @@ def get_progress(xid):
 
     """
     url = 'http://api.d-h.st/progress?X-Progress-ID=%s' % xid
+    # Wait a bit more before getting the progress for the first time. This is
+    # to (hopefully) avoid the "Max retries exceeded" error, which seems to
+    # happen when we request the progress too many times while the the upload
+    # is still starting.
+    time.sleep(5)
     while True:
         # We're getting the progress from the website, so there's a slight
         # traffic overhead, which is why we're waiting a few seconds between
         # refreshes.
-        time.sleep(2)
+        time.sleep(5)
         try:
             request = get(url)
         # It doesn't matter if we fail to get the progress, as long as
@@ -254,16 +261,22 @@ def get_progress(xid):
         # terminate anyway.
         except requests.exceptions:
             continue
+        except Exception, e:
+            print("An error has occured: %s" % repr(e))
+            print("Continuing...")
+            continue
         resp = request.content.strip()[1:-2]
         progress = json.loads(resp.decode())
         if progress.get('state') == "uploading":
             percentage = progress.get('received') / progress.get('size') * 100
             percentage = '{n:.{d}f}'.format(n=percentage, d=2)
-            print("Progress: %s%%" % percentage, end='\r')
+            print "Progress: %s%%" % percentage,
+            sys.stdout.write('\r')
+            sys.stdout.flush()
         elif progress.get('state') == "starting":
             pass
         else:
-            print(progress.get('state'))
+            print progress.get('state')
 
 def api_do(args):
     """Generates a URL using the passed args, gets the data from it,
@@ -275,8 +288,8 @@ def api_do(args):
     url = gen_url(args)
     try:
         r = get(url)
-    except requests.exceptions as err:
-        print(err)
+    except requests.exceptions, err:
+        print err
         exit(1)
     return r.content
 
@@ -310,7 +323,7 @@ def gen_url(args):
 
 def signal_handler(signal, frame):
     """Handle SIGINT"""
-    print("\nAborted by user.")
+    print "\nAborted by user."
     exit(0)
 
 def clean_dict(args):
@@ -334,7 +347,7 @@ def main():
     if 'username' in args:
         if 'password' not in args:
             args['password'] = getpass("Password? ")
-        print("Logging in...")
+        print "Logging in..."
         args['token'] = login(args['username'], args['password'])
         del args['password']
         del args['username']
@@ -342,14 +355,14 @@ def main():
         del args['password']
     result = None
     if args['action'] in methods:
-        print("Starting...\n")
+        print "Starting...\n"
         args['action'] = methods[args['action']]
         if args['action'] == "uploadapi":
             result = upload(args)
         else:
             result = api_do(args)
     else:
-        print("Action not recognized.")
+        print "Action not recognized."
     if result is not None:
         pretty_print(result)
 
