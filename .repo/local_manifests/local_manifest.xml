@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <remote name="kernel" 
-	  fetch="git://git.kernel.org/pub/scm/" />
-  
-  <remote  name="googlecode"
-           fetch="https://code.google.com/" />  
-  
-  <project path="." name="95A31/android_scripts" remote="github"/>
-  
-  <project path="device/sony/kumquat" name="95A31/android_device_sony_kumquat" remote="github"/>
-  <project path="hardware/semc" name="95A31/android_hardware_semc" remote="github"/>
-  <project path="kernel/sony/u8500" name="95A31/android_kernel_sony_u8500" remote="github"/>
-  <project path="vendor/sony/kumquat" name="95A31/android_vendor_sony_kumquat" remote="github"/>
-  
+  <remote name="kernel"
+          fetch="git://git.kernel.org/pub/scm/" />
+
+  <remote name="googlecode"
+          fetch="https://code.google.com/" />
+
+  <remote name="bitbucket"
+          fetch="git+ssh://git@bitbucket.org/" />
+
+  <project path="." name="legacyxperia2012/android_scripts" remote="bitbucket"/>
+
+  <project path="device/sony/kumquat" name="legacyxperia2012/android_device_sony_kumquat" remote="bitbucket"/>
+  <project path="hardware/semc" name="legacyxperia2012/android_hardware_semc" remote="bitbucket"/>
+  <project path="kernel/sony/u8500" name="legacyxperia2012/android_kernel_sony_u8500" remote="bitbucket"/>
+  <project path="vendor/sony/kumquat" name="legacyxperia2012/android_vendor_sony_kumquat" remote="bitbucket"/>
+
   <!--
   <remove-project name="CyanogenMod/android_external_bluetooth_bluedroid" />
   <project remote="kernel" path="external/bluetooth/bluez" name="bluetooth/bluez" groups="pdk" revision="master" />
   <project remote="kernel" path="external/bluetooth/sbc" name="bluetooth/sbc" groups="pdk" revision="master" />
   <project remote="googlecode" path="external/bluetooth/glib" name="p/aosp-bluez.glib" groups="pdk" revision="master" />
   -->
-  
+
 </manifest>
