@@ -17,11 +17,9 @@
   <project path="kernel/sony/u8500" name="legacyxperia2012/android_kernel_sony_u8500" remote="bitbucket"/>
   <project path="vendor/sony/kumquat" name="legacyxperia2012/android_vendor_sony_kumquat" remote="bitbucket"/>
 
-  <!--
   <remove-project name="CyanogenMod/android_external_bluetooth_bluedroid" />
   <project remote="kernel" path="external/bluetooth/bluez" name="bluetooth/bluez" groups="pdk" revision="master" />
   <project remote="kernel" path="external/bluetooth/sbc" name="bluetooth/sbc" groups="pdk" revision="master" />
   <project remote="googlecode" path="external/bluetooth/glib" name="p/aosp-bluez.glib" groups="pdk" revision="master" />
-  -->
 
 </manifest>
