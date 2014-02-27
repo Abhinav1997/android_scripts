@@ -19,6 +19,7 @@ do
   fi
 done
 
+rm hardware/libhardware/include/hardware/bluetooth.h
 cp aosp/hardware/libhardware/include/hardware/bluetooth.h hardware/libhardware/include/hardware/bluetooth.h
 
 rm -rf frameworks/base/core/java/android/bluetooth
