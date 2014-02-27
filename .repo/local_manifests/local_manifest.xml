@@ -21,5 +21,10 @@
   <project remote="kernel" path="external/bluetooth/bluez" name="bluetooth/bluez" groups="pdk" revision="master" />
   <project remote="kernel" path="external/bluetooth/sbc" name="bluetooth/sbc" groups="pdk" revision="master" />
   <project remote="googlecode" path="external/bluetooth/glib" name="p/aosp-bluez.glib" groups="pdk" revision="master" />
+  
+  <remove-project name="CyanogenMod/android_packages_apps_Bluetooth" />
+  <remove-project name="CyanogenMod/android_packages_apps_BluetoothExt" />
+  
+  <project path="packages/apps/Bluetooth" name="platform/packages/apps/Bluetooth" remote="aosp" revision="refs/tags/android-4.4.2_r1"/>
 
 </manifest>
