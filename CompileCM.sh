@@ -19,9 +19,11 @@ do
   fi
 done
 
+rm aosp/hardware/libhardware/Android.mk
 rm hardware/libhardware/include/hardware/bluetooth.h
 cp aosp/hardware/libhardware/include/hardware/bluetooth.h hardware/libhardware/include/hardware/bluetooth.h
 
+rm  aosp/frameworks/base/Android.mk
 rm -rf frameworks/base/core/java/android/bluetooth
 cp -r aosp/frameworks/base/core/java/android/bluetooth frameworks/base/core/java/android
 
