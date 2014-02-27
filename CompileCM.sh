@@ -19,11 +19,10 @@ do
   fi
 done
 
-curl https://raw.github.com/android/platform_hardware_libhardware/master/include/hardware/bluetooth.h > hardware/libhardware/include/hardware/bluetooth.h
+cp aosp/hardware/libhardware/include/hardware/bluetooth.h hardware/libhardware/include/hardware/bluetooth.h
 
 rm -rf frameworks/base/core/java/android/bluetooth
-
-svn export https://github.com/android/platform_frameworks_base/trunk/core/java/android/bluetooth frameworks/base/core/java/android/
+cp -r aosp/frameworks/base/core/java/android/bluetooth frameworks/base/core/java/android
 
 #Compile
 ./RecompileCM.sh
