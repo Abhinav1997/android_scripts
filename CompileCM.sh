@@ -23,9 +23,14 @@ find aosp/hardware/libhardware -type f -name "*.mk" -exec rm -f {} \;
 rm hardware/libhardware/include/hardware/bluetooth.h
 cp aosp/hardware/libhardware/include/hardware/bluetooth.h hardware/libhardware/include/hardware/bluetooth.h
 
+
 find aosp/frameworks/base -type f -name "*.mk" -exec rm -f {} \;
 rm -rf frameworks/base/core/java/android/bluetooth
 cp -r aosp/frameworks/base/core/java/android/bluetooth frameworks/base/core/java/android
+
+rm frameworks/base/services/java/com/android/server/BluetoothManagerService.java
+cp aosp/frameworks/base/services/java/com/android/server/BluetoothManagerService.java frameworks/base/services/java/com/android/server/BluetoothManagerService.java
+
 
 find aosp/packages/apps/Settings -type f -name "*.mk" -exec rm -f {} \;
 rm -rf packages/apps/Settings/src/com/android/settings/bluetooth
