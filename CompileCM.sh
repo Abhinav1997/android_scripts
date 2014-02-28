@@ -27,5 +27,10 @@ find aosp/frameworks/base -type f -name "*.mk" -exec rm -f {} \;
 rm -rf frameworks/base/core/java/android/bluetooth
 cp -r aosp/frameworks/base/core/java/android/bluetooth frameworks/base/core/java/android
 
+find aosp/packages/apps/Settings -type f -name "*.mk" -exec rm -f {} \;
+rm -rf packages/apps/Settings/src/com/android/settings/bluetooth
+cp -r aosp/packages/apps/Settings/src/com/android/settings/bluetooth packages/apps/Settings/src/com/android/settings
+
+
 #Compile
 ./RecompileCM.sh
