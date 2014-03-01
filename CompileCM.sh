@@ -23,6 +23,8 @@ find aosp/hardware/libhardware -type f -name "*.mk" -exec rm -f {} \;
 rm hardware/libhardware/include/hardware/bluetooth.h
 cp aosp/hardware/libhardware/include/hardware/bluetooth.h hardware/libhardware/include/hardware/bluetooth.h
 
+rm hardware/libhardware/include/hardware/bt_sock.h
+cp aosp/hardware/libhardware/include/hardware/bt_sock.h hardware/libhardware/include/hardware/bt_sock.h
 
 find aosp/frameworks/base -type f -name "*.mk" -exec rm -f {} \;
 rm -rf frameworks/base/core/java/android/bluetooth
