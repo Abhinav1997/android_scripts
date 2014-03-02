@@ -11,7 +11,7 @@ fi
 echo Patching...
 for d in $(ls $patchDir);
 do
-  for f in $(ls $d | grep .patch);
+  for f in $(ls $patchDir"/"$d | grep .patch);
   do
     patch -p1 --verbose < $patchDir"/"$d"/"$f
     RETVAL=$?
