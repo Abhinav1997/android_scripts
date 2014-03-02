@@ -9,14 +9,17 @@ fi
 
 #Patch
 echo Patching...
-for f in $(ls $patchDir | grep .patch);
+for d in $(ls $patchDir);
 do
-  patch -p1 --verbose < $patchDir"/"$f
-  RETVAL=$?
-  if [ $RETVAL -ne 0 ]; then
-        echo "Error with patch $f"
-        exit $RETVAL
-  fi
+  for f in $(ls $d | grep .patch);
+  do
+    patch -p1 --verbose < $patchDir"/"$d"/"$f
+    RETVAL=$?
+    if [ $RETVAL -ne 0 ]; then
+	  echo "Error with patch $d/$f"
+	  exit $RETVAL
+    fi
+  done
 done
 
 find aosp/hardware/libhardware -type f -name "*.mk" -exec rm -f {} \;
