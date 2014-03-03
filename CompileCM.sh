@@ -13,7 +13,7 @@ for d in $(ls $patchDir);
 do
   for f in $(ls $patchDir"/"$d | grep .patch);
   do
-    patch -p1 --verbose < $patchDir"/"$d"/"$f
+    git apply -p1 --verbose < $patchDir"/"$d"/"$f
     RETVAL=$?
     if [ $RETVAL -ne 0 ]; then
 	  echo "Error $RETVAL with patch $d/$f"
