@@ -16,7 +16,7 @@ do
     patch -p1 --verbose < $patchDir"/"$d"/"$f
     RETVAL=$?
     if [ $RETVAL -ne 0 ]; then
-	  echo "Error with patch $d/$f"
+	  echo "Error $RETVAL with patch $d/$f"
 	  exit $RETVAL
     fi
   done
